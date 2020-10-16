@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+<div class="card-header">
+	Todos
+  </div>
+  <ul class="list-group list-group-flush">
+	{% block content %}
+	<ul>
+		{% for article in articles %}
+	<li>{{ article.author }} - {{ article.title }} - {{ article.description }}</li>
+	{% endfor %}
+  </ul>
+{% endblock %}
